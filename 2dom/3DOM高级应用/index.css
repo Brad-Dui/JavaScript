@@ -1,0 +1,17 @@
+
+.tab1 {
+    text-align: center;
+    border-collapse: collapse;/*设置初始化 该句失效 不完全生效*/
+    border:1px solid #dedede;
+    box-sizing: border-box; 
+}
+.tab1 thead {
+    background: #dede;
+}
+.tab1 tr {
+    height: 50px;
+}
+.tab1 td {
+    width: 100px;
+    border:1px solid #dedede;
+}
