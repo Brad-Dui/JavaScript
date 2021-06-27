@@ -1,24 +1,26 @@
 /*
  * @Author: your name
  * @Date: 2021-06-05 21:11:21
- * @LastEditTime: 2021-06-05 22:53:36
+ * @LastEditTime: 2021-06-27 22:26:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \语法\9、函数\index.js
  */
 /**
- * 返回值
+ * 1.返回值
  * 函数返回值return，只有return无参数：undefined，有参数无return： undefined；
  * 函数返回尽量是一种类型
- */
-/**
- * 传参
+ *
+ * 2.传参
  * arguments：可变参（不定参） 实参数组
- */
-/**
- * css函数
+ *
+ * 3.css函数
  * css(id,'style')获取样式
  * css(id,'style','parameter')设置样式
+ *
+ * 4.获取最终显示的样式
+ * 兼容IE obj.currentStyle.attr
+ * 兼容Chorm getComputedStyle(obj,*).attr 
  */
 window.onload = function () {
 

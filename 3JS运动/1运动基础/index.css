@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.moveBox {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+.shareBox {
+    width: 100px;
+    height: 200px;
+    background-color: #dede;
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    cursor: pointer;
+}
+.shareBox span {
+    width: 20px;
+    height: 60px;
+    background-color: #dedede;
+    line-height: 20px;
+    position: absolute;/* 添加定位后才成列*/
+    right: -20px;
+    top: 70px;
+}
+.changeBox {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    filter: alpha(opacity=30); /* 兼容IE */
+    opacity: .3;/* 兼容Chrome Firefox */
+    position: absolute;
+    left: 400px;
+}
