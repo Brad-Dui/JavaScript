@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-27 14:03:26
- * @LastEditTime: 2021-06-27 21:44:54
+ * @LastEditTime: 2021-06-28 20:30:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \基础\3JS运动\1运动基础\index.html
@@ -18,14 +18,23 @@
     <title>Document</title>
 </head>
 
-<body>
-    <input id="startBtn" type="button" value="开始运动">
+<body style="height: 2000px;">
+    <input id="startBtn1" type="button" value="运动到200">
+    <input id="startBtn2" type="button" value="运动到400">
     <input id="stopBtn" type="button" value="结束运动">
     <div id="moveBox" class="moveBox"></div>
     <div id="shareBox" class="shareBox">
         <span>分享到</span>
     </div>
     <div id="changeBox" class="changeBox"></div>
+    <div class="bufferMove">
+        <input id="bufferBtn" type="button" value="开始运动">
+        <br>
+        <div id="bufferBox" class="bufferBox"></div>
+    </div>
+    <div id="hangBox" class="hangBox"></div>
+    <div class="firstLine"></div>
+    <div class="secondLine"></div>
 </body>
 
 </html>
