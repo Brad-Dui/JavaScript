@@ -133,7 +133,7 @@ window.onload = function () {
             // speed = parseInt(speed * (iTarget - oBufferBox.offsetLeft) / iTarget);
             let speed = (iTarget - oBufferBox.offsetLeft) / 10;
             speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);//向左向右准确停止
-            if (oBufferBox.offsetLeft == iTarget) {
+            if (oBufferBox.offsetLeft == iTarget) {//速度最后会变成1或-1 可以等号判断
                 clearInterval(bufferTimer);
             }
             else {

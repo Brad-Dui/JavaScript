@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.multipleBox1 .widthBox {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    margin: 10px;
+}
+.multipleBox2 {
+    display: flex;
+    justify-content: space-around;
+}
+.multipleBox2 .alphaBox {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    filter: alpha(opacity = 30);
+    opacity: .3;
+}
+.publicChange {
+    display: flex;
+}
+.changeBox {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 10px;
+}
+.changeAlpha {
+    filter: alpha(opacity=30);
+    opacity: .3;
+}
