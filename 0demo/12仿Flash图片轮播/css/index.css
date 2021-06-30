@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: gray;
+}
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.container .bigBox {
+    width: 600px;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+}
+.container .bigBox .leftMarkBox {
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    filter: alpha(opacity = 30);
+    opacity: .3;
+    position: absolute;
+    left: 0;
+}
+.container .bigBox .leftMarkBox .leftMark {
+    width: 60px;
+    height: 60px;
+    background: url(../img/btn.gif) top no-repeat;
+    position: absolute;
+    top:170px;
+    left: 15px;
+    filter: alpha(opacity=30);
+    opacity: .3;
+}
+.container .bigBox .rightMarkBox {
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    filter: alpha(opacity = 30);
+    opacity: .3;
+    position: absolute;
+    right: 0;
+}
+.container .bigBox .rightMarkBox .rightMark {
+    width: 60px;
+    height: 60px;
+    background: url(../img/btn.gif) bottom no-repeat;
+    position: absolute;
+    top:170px;
+    right: 15px;
+    filter: alpha(opacity=30);
+    opacity: .3;
+}
+.container .bigBox .bigImg {
+    position: relative;
+}
+.container .bigBox .bigLi {
+    width: 600px;
+    height: 375px;
+    position: absolute;
+    list-style: none;
+}
+.container .bigBox .bigLi img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.container .smallBox {
+    width: 600px;
+    height: 137px;
+    background-color: #dedede;
+    overflow: hidden;
+    position: relative;
+}
+.container .smallBox .smallImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container .smallBox  .smallLi{
+    float: left;
+    width: 187px;
+    height: 107px;
+    margin: 10px 0 10px 10px;
+    list-style: none;
+}
+.container .smallBox .smallLi img {
+    width: 100%;
+    height: auto;
+}
+
