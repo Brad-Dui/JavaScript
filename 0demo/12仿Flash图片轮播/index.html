@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-29 22:59:49
- * @LastEditTime: 2021-06-30 20:22:26
+ * @LastEditTime: 2021-06-30 23:33:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \jsdemo\demo\12仿Flash图片轮播\index.html
@@ -21,32 +21,30 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container" class="container">
         <div class="flash">
             <div class="bigBox">
-                <ul class="bigImg">
-                    <li class="bigLi"><img src="./img/1.jpg"></li>
-                    <li class="bigLi"><img src="./img/2.jpg"></li>
-                    <li class="bigLi"><img src="./img/3.jpg"></li>
-                    <li class="bigLi"><img src="./img/4.jpg"></li>
-                    <li class="bigLi"><img src="./img/5.jpg"></li>
-                    <li class="bigLi"><img src="./img/6.jpg"></li>
+                <ul>
+                    <li style="z-index: 1;"><img src="./img/1.jpg"></li>
+                    <li><img src="./img/2.jpg"></li>
+                    <li><img src="./img/3.jpg"></li>
+                    <li><img src="./img/4.jpg"></li>
+                    <li><img src="./img/5.jpg"></li>
+                    <li><img src="./img/6.jpg"></li>
                 </ul>
-                <div class="leftMarkBox">
-                    <div class="leftMark"></div>
-                </div>
-                <div class="rightMarkBox">
-                    <div class="rightMark"></div>
-                </div>
+                <div class="leftMark"></div>
+                <div class="rightMark"></div>
+                <a class="prev" href="javascript:;"></a>
+                <a class="next" href="javascript:;"></a>
             </div>
             <div class="smallBox">
-                <ul class="smallImg">
-                    <li class="smallLi"><img src="./img/1.jpg"></li>
-                    <li class="smallLi"><img src="./img/2.jpg"></li>
-                    <li class="smallLi"><img src="./img/3.jpg"></li>
-                    <li class="smallLi"><img src="./img/4.jpg"></li>
-                    <li class="smallLi"><img src="./img/5.jpg"></li>
-                    <li class="smallLi"><img src="./img/6.jpg"></li>
+                <ul>
+                    <li style="filter: alpha(opacity=100);opacity: 1;"><img src="./img/1.jpg"></li>
+                    <li><img src="./img/2.jpg"></li>
+                    <li><img src="./img/3.jpg"></li>
+                    <li><img src="./img/4.jpg"></li>
+                    <li><img src="./img/5.jpg"></li>
+                    <li><img src="./img/6.jpg"></li>
                 </ul>
             </div>
         </div>

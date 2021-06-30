@@ -1,25 +1,16 @@
 /*
  * @Author: your name
  * @Date: 2021-06-29 22:55:58
- * @LastEditTime: 2021-06-29 23:56:04
+ * @LastEditTime: 2021-06-30 22:38:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \jsdemo\demo\12仿Flash图片轮播\js\index.js
  */
 //运动框架
 function startChange(obj, attr, iTarget) {
-    obj.timer = null;
     clearInterval(obj.timer);
     obj.timer = setInterval(function () {
         let realStyle = 0;
-        function getStyle(obj1, attr1) {
-            if (obj1.currentStyle) {
-                return obj1.currentStyle[attr1];
-            }
-            else {
-                return getComputedStyle(obj1, false)[attr1];
-            }
-        }
         if (attr == 'opacity') {
             realStyle = Math.round(parseFloat(getStyle(obj, attr)) * 100);
         }
@@ -29,7 +20,7 @@ function startChange(obj, attr, iTarget) {
         let speed = (iTarget - realStyle) / 6;
         speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
         if (iTarget == realStyle) {
-            clearInterval(timer);
+            clearInterval(obj.timer);
         }
         else {
             if (attr == 'opacity') {
@@ -42,8 +33,17 @@ function startChange(obj, attr, iTarget) {
         }
     }, 30)
 }
+//获取样式
+function getStyle(obj, attr) {
+    if (obj.currentStyle) {
+        return obj.currentStyle[attr];
+    }
+    else {
+        return getComputedStyle(obj, false)[attr];
+    }
+}
 //选取class
-function getClass(oParent, oClass) {
+function getByClass(oParent, oClass) {
     let arr = [];
     let aElem = oParent.getElementsByTagName('*');
     for (let i = 0; i < aElem.length; i++) {

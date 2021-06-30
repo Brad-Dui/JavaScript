@@ -13,83 +13,93 @@ body {
     overflow: hidden;
 }
 .container .bigBox {
-    width: 600px;
-    height: 375px;
+    width: 597px;
+    height: 372px;
     overflow: hidden;
     position: relative;
 }
-.container .bigBox .leftMarkBox {
+.container .bigBox .leftMark {
     width: 50%;
     height: 100%;
     background-color: red;
-    filter: alpha(opacity = 30);
-    opacity: .3;
+    filter: alpha(opacity = 0);
+    opacity: 0;
     position: absolute;
     left: 0;
+    z-index: 2999;
 }
-.container .bigBox .leftMarkBox .leftMark {
+.container .bigBox  .prev{
     width: 60px;
     height: 60px;
     background: url(../img/btn.gif) top no-repeat;
     position: absolute;
     top:170px;
     left: 15px;
-    filter: alpha(opacity=30);
-    opacity: .3;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 3000;
 }
-.container .bigBox .rightMarkBox {
+.container .bigBox .rightMark {
     width: 50%;
     height: 100%;
     background-color: blue;
-    filter: alpha(opacity = 30);
-    opacity: .3;
+    filter: alpha(opacity = 0);
+    opacity: 0;
     position: absolute;
     right: 0;
+    z-index: 2999;
 }
-.container .bigBox .rightMarkBox .rightMark {
+.container .bigBox .next {
     width: 60px;
     height: 60px;
     background: url(../img/btn.gif) bottom no-repeat;
     position: absolute;
     top:170px;
     right: 15px;
-    filter: alpha(opacity=30);
-    opacity: .3;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 3000;
 }
-.container .bigBox .bigImg {
+.container .bigBox ul {
     position: relative;
 }
-.container .bigBox .bigLi {
-    width: 600px;
-    height: 375px;
-    position: absolute;
+.container .bigBox li {
+    width: 597px;
+    height: 372px;
     list-style: none;
+    position: absolute;
+    overflow: hidden;/*图片下拉效果需要溢出隐藏*/
 }
-.container .bigBox .bigLi img {
+.container .bigBox li img {
     width: 100%;
     height: auto;
     vertical-align: bottom;
 }
 .container .smallBox {
-    width: 600px;
+    width: 596px;
     height: 137px;
     background-color: #dedede;
     overflow: hidden;
     position: relative;
 }
-.container .smallBox .smallImg {
+.container .smallBox ul {
+    width: 1200px;
     position: absolute;
     left: 0;
     top: 0;
 }
-.container .smallBox  .smallLi{
+.container .smallBox  li{
     float: left;
     width: 187px;
     height: 107px;
-    margin: 10px 0 10px 10px;
+    border: 6px solid #dedede;
     list-style: none;
+    cursor: pointer;
+    filter: alpha(opacity=30);
+    opacity: .3;
+    overflow: hidden;
 }
-.container .smallBox .smallLi img {
+.container .smallBox li img {
     width: 100%;
     height: auto;
 }
