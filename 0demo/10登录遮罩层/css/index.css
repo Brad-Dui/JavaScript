@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* 导航栏 */
+.nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.confirm {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(90, 87, 87, 0.7);
+    position: fixed;/*固定窗口*/
+    top: 0;
+}
+.c-form {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* 登录与注册 */
+.content {
+    width: 300px;
+    height: 300px;
+    /* background-color: rosybrown; */
+    box-sizing: border-box;
+    border: 1px solid #34ba9f;
+    border-radius: 5px;
+}
+.loginBtns {
+    width: 100%;
+    height: 50px;
+    /* background-color: royalblue; */
+}
+.loginBtns ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.loginBtns ul li {
+    list-style: none;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #777;
+    cursor: pointer;
+}
+.loginBtns  .loginBtn {
+    border-bottom: 1px solid #34ba9f;
+}
+.contentItems {
+    margin-top: 20px;
+    width: 100%;
+    height: 230px;
+    /* background-color: seagreen; */
+}
+/* 登录 */
+.loginContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+}
+.contentItems input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #888;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.contentItems .submit {
+    background-color: #34ba9f;
+    color: #fff;
+    border: 0px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/* 注册 */
+.registerContent {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+}

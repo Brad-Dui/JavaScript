@@ -1,0 +1,68 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-06-07 13:53:08
+ * @LastEditTime: 2021-06-07 20:02:46
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \10登录遮罩层\js\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <div></div>
+        <div id="login" class="login">登录</div>
+    </div>
+    <!-- 登录框遮罩层 -->
+    <form action="#">
+        <div id="confirm" class="confirm">
+            <div class="c-form">
+                <span id="close" class="close">×</span>
+                <!-- 登录与注册按钮 -->
+                <div class="content">
+                    <div class="loginBtns">
+                        <ul id="loginBtns">
+                            <li id="loginBtn" class="loginBtn">登录</li>
+                            <li id="registerBtn" class="registerBtn">注册</li>
+                        </ul>
+                    </div>
+                    <!-- 登录与注册内容 -->
+                    <div id="contentItems" class="contentItems">
+                        <div class="loginContent item">
+                            <div class="username">
+                                <input type="username" placeholder="username">
+                            </div>
+                            <div class="password">
+                                <input class="password" type="password" placeholder="password">
+                            </div>
+                            <input class="submit" type="submit" value="登录">
+                        </div>
+                        <div class="registerContent item">
+                            <div class="username">
+                                <input type="username" placeholder="username">
+                            </div>
+                            <div class="password">
+                                <input class="password" type="password" placeholder="password">
+                            </div>
+                            <input class="submit" type="submit" value="注册">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>

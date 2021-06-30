@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#content1 {
+    display: none;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid #666;
+    text-align: center;
+}
