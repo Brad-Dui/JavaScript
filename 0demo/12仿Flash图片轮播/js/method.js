@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-29 22:55:58
- * @LastEditTime: 2021-06-30 22:38:48
+ * @LastEditTime: 2021-07-01 14:55:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \jsdemo\demo\12仿Flash图片轮播\js\index.js
@@ -52,4 +52,18 @@ function getByClass(oParent, oClass) {
         }
     }
     return arr;
+}
+//遍历dom树(递归先序遍历)
+function printNodes(node) {
+    if (node.nodeType == 1) {
+        console.log(node.tagName);
+    }
+    let childNodes = node.childNodes;
+    let item = null;
+    for (let i = 0; i < childNodes.length; i++) {
+        item = childNodes[i];
+        if (item.nodeType == 1) {
+            printNodes(item);
+        }
+    }
 }

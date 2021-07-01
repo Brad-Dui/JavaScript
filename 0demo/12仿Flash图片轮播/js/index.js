@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-29 22:55:58
- * @LastEditTime: 2021-07-01 14:31:44
+ * @LastEditTime: 2021-07-01 14:55:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \jsdemo\demo\12仿Flash图片轮播\js\index.js
@@ -91,11 +91,9 @@ window.onload = function () {
             now = aSmallLi.length - 1;
         }
         tab();
-        console.log(now);
     }
     oBtnNext.onclick = function () {
         now++;
-        console.log(now);
         if (now == aSmallLi.length) {
             now = 0;
         }
@@ -109,4 +107,6 @@ window.onload = function () {
     oFlash.onmouseout = function () {
         timer = setInterval(oBtnNext.onclick, 3000);
     }
+    //遍历节点树
+    printNodes(oContainer)
 }
