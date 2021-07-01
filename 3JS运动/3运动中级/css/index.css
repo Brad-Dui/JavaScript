@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 2000px;
+}
+.chainBox {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    filter: alpha(opacity = 30);
+    opacity: .3;
+}
+.showBtn {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+}
+.rightChain {
+    width: 150px;
+    height: 50px;
+    background-color: royalblue;
+    position: fixed;
+    right: -100px;
+    bottom: 0;
+    z-index: 1;
+}
+.bottomChain {
+    width: 150px;
+    height: 200px;
+    background-color: salmon;
+    position: fixed;
+    right: 0;
+    bottom: -150px;
+    z-index: 0;
+    display: none;
+}
+.bottomChain span {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
