@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-06-29 22:55:58
- * @LastEditTime: 2021-07-01 01:27:31
+ * @LastEditTime: 2021-07-01 14:31:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \jsdemo\demo\12仿Flash图片轮播\js\index.js
  */
 window.onload = function () {
     let oContainer = document.getElementById('container');
+    let oFlash = getByClass(oContainer, 'flash')[0];
     let oBtnLeft = getByClass(oContainer, 'leftMark')[0];
     let oBtnRight = getByClass(oContainer, 'rightMark')[0];
     let oBtnPrev = getByClass(oContainer, 'prev')[0];
@@ -20,7 +21,6 @@ window.onload = function () {
     let aSmallLi = oSmallBox.getElementsByTagName('li');
 
     oSmallUl.style['height'] = aSmallLi[0].offsetHeight + 'px';
-    console.log(oSmallUl)
     let nowZindex = 2;
     let now = 0;
 
@@ -64,7 +64,7 @@ window.onload = function () {
             //修改大图层级
             aBigLi[now].style['z-index'] = nowZindex++;
             //修改大图高度实现下拉
-            let originHeight = parseInt(getStyle(aBigLi[i], 'height'));//连续点击会出bug 固定值则不会
+            let originHeight = parseInt(getStyle(aBigLi[now], 'height'));//连续点击会出bug 固定值则不会
             aBigLi[now].style['height'] = 0;
             startChange(aBigLi[now], 'height', originHeight);
             //选中透明 其余全透明
@@ -82,24 +82,31 @@ window.onload = function () {
             else {
                 startChange(oSmallUl, 'left', -(now - 1) * aSmallLi[0].offsetWidth);
             }
-
         }
-        //上一个下一个
-        oBtnPrev.onclick = function () {
-            now--;
-            if (now == -1) {
-                now = aSmallLi.length - 1;
-            }
-            tab();
+    }
+    //上一个下一个
+    oBtnPrev.onclick = function () {
+        now--;
+        if (now == -1) {
+            now = aSmallLi.length - 1;
         }
-        oBtnNext.onclick = function () {
-            now++;
-            if (now == aSmallLi.length) {
-                now = 0;
-            }
-            tab()
+        tab();
+        console.log(now);
+    }
+    oBtnNext.onclick = function () {
+        now++;
+        console.log(now);
+        if (now == aSmallLi.length) {
+            now = 0;
         }
-        //自动滚动
-
+        tab();
+    }
+    //自动滚动
+    let timer = setInterval(oBtnNext.onclick, 3000);
+    oFlash.onmouseover = function () {
+        clearInterval(timer);
+    }
+    oFlash.onmouseout = function () {
+        timer = setInterval(oBtnNext.onclick, 3000);
     }
 }
