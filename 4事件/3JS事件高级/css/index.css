@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 2000px;
+}
+.dragParent {
+    width: 600px;
+    height: 400px;
+    background-color: #dede;
+    position: relative;
+    left: 200px;
+    margin: 50px;
+}
+.dragParent .dragBox {
+    width: 100px;
+    height: 100px;
+    word-wrap: break-word;
+    background-color: red;
+    position: absolute;
+    filter: alpha(opacity = 30);
+    opacity: .3;
+    cursor: pointer;
+}
+.scrollParent {
+    width: 800px;
+    height: 20px;
+    background-color:gray;
+    position: absolute;
+    top:20px;
+    left: 200px;
+    z-index: 1;
+}
+.scrollBox{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    z-index: 3000;
+}
+.greenBox{
+    height: 20px;
+    background-color: green;
+    /* filter: alpha(opacity=0);
+    opacity: 0; */
+    position: absolute;
+    z-index: 2;
+}
