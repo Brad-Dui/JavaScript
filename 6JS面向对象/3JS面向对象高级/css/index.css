@@ -1,0 +1,19 @@
+* {
+    padding:0;
+    margin: 0;
+}
+.dragBox1 {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position:absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+.dragBox2 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(179, 179, 179);
+    position:absolute;
+    cursor: pointer;
+}
