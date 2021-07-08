@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 2000px;
+}
+.fixedBox {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
