@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.loadBox {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 20px;
+    background-color: #ddd;
+    position: relative;
+    z-index: 0;
+}
+.loadBox .loadColor {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 20px;
+    background-color: red;
+    z-index: 1;
+}
+span {
+    z-index: 2;
+}
