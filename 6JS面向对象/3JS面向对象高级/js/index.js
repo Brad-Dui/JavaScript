@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-07 18:52:38
- * @LastEditTime: 2021-07-07 23:19:03
+ * @LastEditTime: 2021-07-13 14:17:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \基础\6JS面向对象\3JS面向对象高级\js\index.js
@@ -11,6 +11,10 @@
  *          简单
  *          不适合多个对象
  *          命名空间：在不同的json中写相同名字的方法
+ *      JSON语法规则：数据为 键/值 对，数据由逗号分隔，大括号保存对象，方括号保存数组
+ *      JSON 格式化后为 JavaScript 对象
+ *      JSON.parse(text,fn)将一个 JSON 字符串转换为对象
+ *      JSON.stringify(value,fn,space)
  * 继承
  *      函数的调用可以写成 fn.call() call中的值可以改变函数中的this
  *      引用：创建一块空间存值 将值赋给其他元素时 修改其他元素会同时修改这块空间
@@ -40,6 +44,13 @@ window.onload = function () {
     }
     json.showName();
     json.showPhone();
+    //字符串与对象的转换
+    let json1 = '{"name": "张三","phone": "456"}'
+    console.log(json1);
+    let object = JSON.parse(json1);
+    console.log(object);
+    let str = JSON.stringify(object);
+    console.log(str);
     //命名空间 在不同的json在可以命名相同的方法
     let web = {};
     web.front = {};
