@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+}
+.container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.content {
+    width: 488px;
+    height: 119px;
+    position: relative;
+    overflow: hidden;
+}
+.content ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.content ul li {
+    float: left;
+    transition: all .5s;
+}
+.content ul li:hover{
+    transform: translateY(2px);
+}
