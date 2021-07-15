@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-07-06 17:26:01
- * @LastEditTime: 2021-07-06 22:43:03
+ * @LastEditTime: 2021-07-16 01:24:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \基础\6JS面向对象\1JS面向对象基础\js\index.js
@@ -81,7 +81,7 @@ window.onload = function () {
 
     //构造函数优化 (函数内用this 函数外用new)(解决没有new的问题)
     function creatPerson(name, phone) {
-        //在外用new-> var this = new Objext();
+        //在外用new替换 var this = new Objext();
         this.name = name;
         this.phone = phone;
         this.showName = function () {
@@ -90,7 +90,7 @@ window.onload = function () {
         this.showPhone = function () {
             console.log('电话：' + phone);
         }
-        //在外用new-> return this;
+        //在外用new替换 return this;
     }
     let person1 = new creatPerson('王二', '789');
     let person2 = new creatPerson('麻子', '114');
