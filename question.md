@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-16 20:03:34
- * @LastEditTime: 2021-07-17 23:37:35
+ * @LastEditTime: 2021-07-18 23:58:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \JS基础\question.md
@@ -33,3 +33,14 @@
 ### 18.构造一种完美枚举属性的方法
 ### 19.解释什么是序列化对象，如何序列化
 ### 20.重构toString()、toLocaleString()、valueOf()、toJson()方法
+---
+## 7.18
+---
+### 21.创建数组的方式，之间有什么不同
+### 22.扩展操作符的作用
+### 23.Array.of()与Array.from()
+### 24.迭代数组定义，数组迭代器方法有哪些
+### 25.打平数组的方法和concat()
+### 26.slice()、splice()、fill()、copyWithin()的作用和区别
+### 27.数组与字符串的转换
+### 28.数组索引和排序方法
