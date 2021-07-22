@@ -1,61 +1,39 @@
 /*
  * @Author: your name
  * @Date: 2021-06-06 15:23:59
- * @LastEditTime: 2021-06-06 17:57:26
+ * @LastEditTime: 2021-07-22 19:39:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \语法\10、数组\index.js
  */
+/**
+ * 数组 一种特殊的对象： 尽量只存储一种类型的数据
+ *      创建数组：      字面量  
+ *                     new Array()：括号中可以只写一个数字 代表数组长度   
+ *                     扩展符 ：用...arr可以将另一个数组打平放入数组中  
+ *                     Array.of()：可以创建一个只有一个数字的数组
+ *                     Array.from() ：期待一个可迭代对象或类数组,第二个参数可以是一个函数，源对象的元素都会传入函数中
+ *      属性：          length
+ *      常用的方法：    添加与删除  arr.push(str) arr.pop() 尾部添加与删除一个元素
+ *      判断是否是数组  1.arr instanceof Array()
+ */
 window.onload = function () {
-    //1、定义(尽量只存储一种类型的数据)
-    let arr1 = [1, 2, 3, 4, 5, 6];           //没有差别，简短性能高
-    let arr2 = new Array(1, 2, 3, 4, 5,);
+    //1、创建(尽量只存储一种类型的数据)
+    let arrLiteral = [1, 2, 3, 4, 5, 6];           //没有差别，简短性能高
+    let arrNew = new Array(2);
+    let arrExtend = [0, ...arrNew, 3];
+    let arrOf = Array.of(2);
+    let arrFrom = Array.from(arrNew, (el) => { console.log(el); })
+    console.log(arrExtend);
+    console.log(arrExtend.length);
+    console.log(arrOf);
 
-    //2、属性：length，可获取可设置(可以快速清空数组)
-    console.log(arr1.length, arr2.length);
-    arr1.length = 2;
-    console.log(arr1);
-    arr2.length = 0;
-    console.log(arr2);
-
-    //3、方法：添加与删除
-    /**
-     * 尾部：添加push(),删除pop()
-     * 首部：添加unshift(),删除shift()
-     */
-    //尾部
-    let arr3 = [1, 2, 3, 4];
-    arr3.push(5);//尾部添加
-    console.log('push添加的位置:' + (arr3.indexOf(5) + 1));
-    arr3.pop();//尾部弹出,弹出一个元素,添加数据无效
-    console.log(arr3);
-    //首部
-    arr3.unshift(0);//首部添加
-    console.log('unshift添加的位置:' + (arr3.indexOf(0) + 1));
-    arr3.shift();//首部弹出,弹出一个元素,添加数据无效
-    console.log(arr3);
-
-    //4、方法：splice插入、删除
-    /**
-     * splice(start,length)删除一段
-     * splice(start,length,元素...)先删除一段再添加元素
-     */
+    //数组常用方法
     let aSplice = [1, 2, 3, 4, 5, 6];
     // aSplice.splice(2, 3);//从下标2开始删除3个元素
     // aSplice.splice(2, 0, 'a', 'b');//从下标2开始添加2个元素
     aSplice.splice(2, 1, 'a', 'b');//从下标2开始先删除一个元素,再添加两个元素(替换)
     console.log(aSplice);
-
-    //5、方法：concat连接
-    /**
-     * a.concat(b),a与b连接;(a必须为数组或者字符串可空)
-     */
-    let aConcat1 = [1, 2, 3];
-    let aConcat2 = [4, 5, 6];
-    console.log(aConcat1.concat(aConcat2));
-    let a = '';
-    let b = [2, 3];
-    console.log(a.concat(b));
 
     //6、方法：join分隔符
     /**
