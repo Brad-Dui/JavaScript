@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-03 16:57:41
- * @LastEditTime: 2021-07-21 22:33:46
+ * @LastEditTime: 2021-07-26 14:39:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \数据类型\dataType.js
@@ -16,7 +16,7 @@
  *                               str.slice(start,end)       切出一部分，end可以是负或没有
  *                               str.split('str')           返回数组，以str为分隔
  *                       
- *                       搜索    str.indexOf('str',index1)  返回从index1开始第一个str的索引 没有返回0
+ *                       搜索    str.indexOf('str',index1)  返回从index1开始第一个str的索引 没有返回0(空字符串返回0)
  *                               str.lastIndexOf('str')     返回最后一个值的索引
  *                      
  *                      布尔搜索  str.startsWith('str')      是否以str开头
@@ -54,7 +54,7 @@ console.log(typeof billion);
 //字符串常用方法
 let str = 'Hello World!';
 console.log(str.substring(5, 2), str.slice(0, -1), str.split(' '));
-console.log(str.indexOf('l'), str.indexOf('l', 3), str.lastIndexOf('l'));
+console.log(str.indexOf('l'), str.indexOf(''), str.indexOf('l', 3), str.lastIndexOf('l'));
 console.log(str.replace('ll', 'cc'), str.toLowerCase(), str.toUpperCase(), str.normalize("NFD"))
 console.log(str.charAt(str.length - 1), str.charCodeAt(0), str.codePointAt(0))
 console.log(str.padStart(14, '*'), str.padEnd(14, '-'))
