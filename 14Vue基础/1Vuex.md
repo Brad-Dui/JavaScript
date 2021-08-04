@@ -203,8 +203,29 @@ vc ==> store //保证vc都可以获取到store
 
 - - ```js
     computed:{
+        //传统写法
+        state1(){
+        	return this.$store.state.option.state1
+        }
+        getter1(){
+        	return this.$store.getters['option/getter1']
+        }
+        //分类数据-简写
     	...mapState('options',['state1','state2'])
     }
+    methods:{
+        //传统写法
+        fn1(){
+            this.$store.dispatch('option/fn1',value)
+        }
+        //分类方法-简写
+        ...mapActions('option',['fn1'])
+    }
     ```
-
-  - 
+    
+  
+- > 添加分类 要在store中加mudles 在分类中加namespaced
+  >
+  > 使用传统的写法，不再是this.$store.state, 需要有option的参与，具体要看store上的api
+  >
+  > 将不同的模块分为不同的文件更容易维护，不易发生冲突
