@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: inherit
+        }
+
+        .nav-item.router-link-active,
+        .menu-item.router-link-active {
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <router-link to="/home" class="nav-item">主页</router-link>
+            <router-link to="/course" class="nav-item">教程</router-link>
+        </nav>
+        <router-view></router-view>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.6.9/vue.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/3.5.2/vue-router.js"></script>
+    <script>
+        const Home = {
+            template: `
+        <div style="display:flex;">
+          <ul style="flex: 0 0 100px;background: red;color: white;">
+            <router-link to="/home/posts" tag="li" class="menu-item">全部</router-link>
+            <router-link to="/home/essence" tag="li" class="menu-item">精华</router-link>
+          </ul>
+          <router-view />
+        </div>
+      `
+        };
+        const Posts = {
+            template: `
+        <div>
+          <h3>全部帖子</h3>
+          <ul>
+            <li v-for="v of list">{{v}}</li>  
+          </ul>
+        </div>
+      `,
+            data: () => ({ list: [] }),
+            created() {
+                this.requestList().then(list => this.list = list);
+            },
+            methods: {
+                requestList() {
+                    return new Promise(resolve => setTimeout(() => resolve(Array.from({ length: 10 }, (_, i) => '帖子' + (i + 1)), 2000)))
+                }
+            }
+        }
+
+        const Essence = {
+            template: '<p>精华</p>'
+        }
+
+        const Course = {
+            template: '<p>教程</p>'
+        }
+        const router = new VueRouter({
+            routes: [
+                { path: '/', redirect: '/home/posts' },
+                {
+                    path: '/home',
+                    component: Home,
+                    children: [
+                        { path: '/', redirect: 'posts' },
+                        { path: 'posts', component: Posts },
+                        { path: 'essence', component: () => Promise.resolve(Essence) /* 异步组件 */ }
+                    ],
+                },
+                { path: '/course', component: Course }
+            ]
+        });
+        new Vue({
+            el: '#app',
+            router
+        });
+    </script>
+</body>
+
+</html>
