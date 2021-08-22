@@ -16,6 +16,10 @@
  *      属性：          length
  *      常用的方法：    添加与删除  arr.push(str) arr.pop() 尾部添加与删除一个元素
  *      判断是否是数组  1.arr instanceof Array()
+ *                     2.arr.__proto__ == Array.prototype
+ *                     3.Array.isArray(arr)
+ *                     4.Object.prototype.toString.call(arr) == '[object Array]'
+ *                     5.arr.constructor == Array 
  */
 window.onload = function () {
     //1、创建(尽量只存储一种类型的数据)

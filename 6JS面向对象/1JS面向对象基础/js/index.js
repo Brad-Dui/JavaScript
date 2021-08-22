@@ -111,7 +111,7 @@ window.onload = function () {
     let animal1 = new animal('小喵', '猫');
     let animal2 = new animal('小汪', '狗');
     //测试在new新的对象时 是否重建了方法
-    console.log(animal1.showName() == animal2.showType());
+    console.log(animal1.showName == animal2.showName);//true
     animal1.showName();
     animal2.showType();
 }
