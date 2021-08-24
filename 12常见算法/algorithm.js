@@ -16,7 +16,7 @@ function quickSort(arr) {
     var pivot = arr.splice(pivotIndex, 1)[0];
     var left = [];
     var right = [];
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] < pivot) {
             left.push(arr[i]);
         }
@@ -55,3 +55,18 @@ console.log("************双指针合并升序数组**********");
     }
     console.log(result);
 })([11, 15, 18, 20, 23], [1, 5, 8, 9, 10])
+/**
+ * 冒泡排序
+ */
+function bubbleSort(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
