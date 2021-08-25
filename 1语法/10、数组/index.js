@@ -71,4 +71,14 @@ window.onload = function () {
     console.log(aSlice);
     console.log(typeof (aSlice1) + ': ' + aSlice1);
     console.log(aSlice2);
+    //9.forEach - 对数组元素进行逐个遍历
+    /**
+     * forEach(callback,thisArg)
+     */
+    //实现forEach
+    Array.prototype.myForEach = function (callback, thisArg) {
+        for (let index = 0; index < this.length; index++) {
+            callback.call(thisArg ?? window, this[index], index, this)
+        }
+    }
 }
